@@ -16,6 +16,9 @@ dependencies:
     version: 18.3.1(react@18.3.1)
 
 devDependencies:
+  '@storybook/addon-a11y':
+    specifier: ^7.6.19
+    version: 7.6.19
   '@storybook/addon-essentials':
     specifier: ^7.6.6
     version: 7.6.19(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1)(react@18.3.1)
@@ -2400,6 +2403,13 @@ packages:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
     dev: true
 
+  /@storybook/addon-a11y@7.6.19:
+    resolution: {integrity: sha512-92SOapbXukkO0RlrA0+8qa61NlCGSUFM7n5DfAA6tobIfhBAhfsEi7I9Q/0F95SCAgJoVVQdeIGKdvHjxO8DAg==}
+    dependencies:
+      '@storybook/addon-highlight': 7.6.19
+      axe-core: 4.9.1
+    dev: true
+
   /@storybook/addon-actions@7.6.19:
     resolution: {integrity: sha512-ATLrA5QKFJt7tIAScRHz5T3eBQ+RG3jaZk08L7gChvyQZhei8knWwePElZ7GaWbCr9BgznQp1lQUUXq/UUblAQ==}
     dependencies:
@@ -3721,6 +3731,11 @@ packages:
     engines: {node: '>= 0.4'}
     dependencies:
       possible-typed-array-names: 1.0.0
+    dev: true
+
+  /axe-core@4.9.1:
+    resolution: {integrity: sha512-QbUdXJVTpvUTHU7871ppZkdOLBeGUKBQWHkHrvN2V9IQWGMt61zf3B45BtzjxEJzYuj0JBjBZP/hmYS/R9pmAw==}
+    engines: {node: '>=4'}
     dev: true
 
   /babel-core@7.0.0-bridge.0(@babel/core@7.24.5):
