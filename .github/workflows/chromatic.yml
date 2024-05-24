@@ -7,14 +7,24 @@ on: push
 # List of jobs
 jobs:
   test:
-  # Operating System
+    # Operating System
     runs-on: ubuntu-latest
     # Job steps
     steps:
+        # Checkout repo
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - run: pnpm
+
+        # Install Node.js
+      - uses: actions/setup-node@v4
+        with: 
+          node-version: 18
+        # Install pnpm
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+          run_install: true
         #👇 Adds Chromatic as a step in the workflow
       - uses: chromaui/action@v1
         # Options required for Chromatic's GitHub Action
